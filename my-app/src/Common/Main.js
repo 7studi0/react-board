@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import ThreadList from './ThreadList'
-import NewThread from './NewThread'
+import ThreadList from '../Thread/ThreadList'
+import NewThread from '../Thread/NewThread'
 
 function App() {
   return (
