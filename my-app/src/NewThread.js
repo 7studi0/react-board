@@ -9,11 +9,14 @@ const NewThread = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch('/api/thread', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title }),
-      })
+      const response = await fetch(
+        'https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title }),
+        }
+      )
       if (!response.ok) {
         throw new Error('Network response was not ok')
       }
@@ -45,5 +48,8 @@ const NewThread = () => {
     </div>
   )
 }
+
+// バリデーション
+// ボタンを連打できないように
 
 export default NewThread

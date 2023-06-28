@@ -5,22 +5,17 @@ const ThreadList = () => {
   const [threads, setThreads] = useState([])
 
   useEffect(() => {
-    fetch('/api/thread')
+    fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads')
       .then(response => response.json())
       .then(data => setThreads(data))
   }, [])
 
-  const filteredThreads = threads.filter(thread => thread.title)
-
   return (
     <div>
       <h2 className="ThreadListTitle">新着スレッド</h2>
-      {filteredThreads
-        .reverse()
-        .slice(0, 10)
-        .map((thread, index) => (
-          <Thread key={index} thread={thread} />
-        ))}
+      {threads.reverse().map((thread, index) => (
+        <Thread key={index} thread={thread} />
+      ))}
     </div>
   )
 }
