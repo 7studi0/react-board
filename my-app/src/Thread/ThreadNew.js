@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const NewThread = () => {
+const ThreadNew = () => {
   const [title, setTitle] = useState('')
   const navigate = useNavigate()
 
@@ -52,4 +52,4 @@ const NewThread = () => {
 // バリデーション
 // ボタンを連打できないように
 
-export default NewThread
+export default ThreadNew
