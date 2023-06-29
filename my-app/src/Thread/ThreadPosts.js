@@ -7,6 +7,11 @@ const ThreadPosts = () => {
   const [threadTitle, setThreadTitle] = useState('')
   const [postTitle, setPostTitle] = useState('')
 
+  // APIのURLを共通化してパスをしていする程度にする
+  // 「もっと見るボタン」クリックしたら次の10件を表示する
+  // エラーの時はユーザーがわかりやすい方法なら良い
+  // ２重クリック防止
+
   const fetchPosts = async () => {
     try {
       const response = await fetch(
