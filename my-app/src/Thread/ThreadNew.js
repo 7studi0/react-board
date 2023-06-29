@@ -38,6 +38,7 @@ const ThreadNew = () => {
             value={title}
             onChange={e => setTitle(e.target.value)}
             placeholder="スレッドタイトル"
+            className="threadTitleInput"
           />
         </div>
         <div className="actionButtonArea">
